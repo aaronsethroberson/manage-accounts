@@ -3,7 +3,7 @@
 </p>
 
 <h1>Creating Users, Group Policy, and Managing Accounts in Azure </h1>
-This tutorial will show how to configure Remote Desktop for non-administrative users, automate user creation with PowerShell, and manage Group Policy settings. <br />
+This tutorial will demonstrate how to configure Remote Desktop for non-administrative users, automate user creation using PowerShell, and manage Group Policy settings. <br />
 
 <h2>Environments and Technologies Used</h2>
 
@@ -18,6 +18,8 @@ This tutorial will show how to configure Remote Desktop for non-administrative u
 - Windows 10 
 
 <h2>Project Walk-Through: </h2>
+<br/>
+<br/>
 
 <p align="center">
 To start, we'll log into Client-1 via Remote Desktop using the Domain Admin account (Jane_admin).
