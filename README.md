@@ -30,17 +30,16 @@ To start, we'll log into Client-1 via Remote Desktop using the Domain Admin acco
 </p>
 
 <p align="center">
-Next, we're going to allow Remote Desktop for non-administrative users. Right-click the START  button> System> You'll see "Remote Desktop" on the right. Click it> "Select users that can access this PC". Then we're going to enter "Domain Users", select check name. Now all users can access the client via Remote Desktop: 
+Next, we will enable Remote Desktop for non-administrative users. Right-click the Start button and select System. On the right side, you will see "Remote Desktop." Click it, then choose "Select users that can access this PC." Enter "Domain Users" and click Check Name. Now, all users can access the client via Remote Desktop.
 <br/>
   
 ![Image](https://github.com/user-attachments/assets/9734d4a7-599e-4d3a-8fe1-8777ae69d1a8)
 
 </p>
+<br/>
 
 <p align="center">
-Now we'll create multiple users in PowerShell. First, we need to log into the Domain Controller using the admin account (jane_admin).
-<br/>
-  
+Now, we'll create multiple users using PowerShell. First, log into the Domain Controller with the admin account (jane_admin).
 
 ![Image](https://github.com/user-attachments/assets/3f804ae7-b47d-4221-84d8-8eedec37b1f5)
 
@@ -52,6 +51,8 @@ After logging in, we'll open PowerShell ISE as an admin
 
 ![Image](https://github.com/user-attachments/assets/87cc7863-7213-46f1-b225-cd7df7234b07)
 ![Image](https://github.com/user-attachments/assets/522f77ce-284d-4f76-b556-0a72e4cc3d64)
+<br/>
+<br/>
 
 <p align="center">
 By pressing "CTRL + S" we can save this file
@@ -70,7 +71,7 @@ Next, we'll paste our script into the top section of PowerShell ISE and click th
 <p/>
 
 <p align="center">
-Once the script is run, it will start creating random users and placing them into the OU (Organizational Unit) we previously created called "_EMPLOYEES." By navigating to Active Directory Users and Computers and selecting the "EMPLOYEES" folder, you’ll see all the users stored there. Pick one of the randomly generated users, then log into Client-1 using their username and the password "Password1
+Once the script is executed, it will begin creating random users and adding them to the OU (Organizational Unit) we created earlier, named "_EMPLOYEES." By going to Active Directory Users and Computers and selecting the "EMPLOYEES" folder, you'll see all the users stored there. Choose one of the randomly generated users, then log into Client-1 using their username and the password "Password1."
 <br/>
 
 ![Image](https://github.com/user-attachments/assets/7c9213da-3f6a-41eb-8279-524ff66a152d)
@@ -86,7 +87,7 @@ Log out of Jane's account on Client-1:
 <p/>
 
 <p align="center">
-We can now log back into Client-1 using the newly created user from the script. Make sure to specify the login context by adding "mydomain.com\" before entering the username
+We can now log back into Client-1 using the newly created user from the script. Be sure to specify the login context by adding "mydomain.com\" before entering the username.
 <br/>
 
 ![Image](https://github.com/user-attachments/assets/a8728870-7860-4128-a018-bf2d6c4361d1)
