@@ -25,7 +25,7 @@ This tutorial will demonstrate how to configure Remote Desktop for non-administr
 To start, we'll log into Client-1 via Remote Desktop using the Domain Admin account (Jane_admin).
 <br/>
   
-![image](https://github.com/user-attachments/assets/19c110f9-fcb8-4a53-a215-d63da58de20a)
+![Image](https://github.com/user-attachments/assets/26237986-20c4-4d9a-8ac1-9556e31dbced)
 
 </p>
 
@@ -33,7 +33,7 @@ To start, we'll log into Client-1 via Remote Desktop using the Domain Admin acco
 Next, we're going to allow Remote Desktop for non-administrative users. Right-click the START  button> System> You'll see "Remote Desktop" on the right. Click it> "Select users that can access this PC". Then we're going to enter "Domain Users", select check name. Now all users can access the client via Remote Desktop: 
 <br/>
   
-![image](https://github.com/user-attachments/assets/b2d3c402-5890-4dbc-a6b0-0ce13640f534)
+![Image](https://github.com/user-attachments/assets/9734d4a7-599e-4d3a-8fe1-8777ae69d1a8)
 
 </p>
 
@@ -42,7 +42,7 @@ Now we'll create multiple users in PowerShell. First, we need to log into the Do
 <br/>
   
 
-![Screenshot 2024-10-04 141402](https://github.com/user-attachments/assets/380e3658-04fa-43c3-ab1d-69e031ef82b8)
+![Image](https://github.com/user-attachments/assets/3f804ae7-b47d-4221-84d8-8eedec37b1f5)
 
 </p>
 
@@ -50,14 +50,14 @@ Now we'll create multiple users in PowerShell. First, we need to log into the Do
 After logging in, we'll open PowerShell ISE as an admin
 <br />
 
-![image](https://github.com/user-attachments/assets/36849256-6490-4303-8ab8-4d1b549f7b12)
-![Screenshot 2024-10-04 141850](https://github.com/user-attachments/assets/d94e7ba6-24fc-4ab3-aa1d-a38b6fc825dd)
+![Image](https://github.com/user-attachments/assets/87cc7863-7213-46f1-b225-cd7df7234b07)
+![Image](https://github.com/user-attachments/assets/522f77ce-284d-4f76-b556-0a72e4cc3d64)
 
 <p align="center">
 By pressing "CTRL + S" we can save this file
 <br/>
 
-![Screenshot 2024-10-04 142109](https://github.com/user-attachments/assets/4e05f646-19e2-4980-b488-7978b63b876e)
+![Image](https://github.com/user-attachments/assets/db905a3e-ed35-4c29-9c44-1080e15d16d6)
 
 <p/>
   
@@ -65,7 +65,7 @@ By pressing "CTRL + S" we can save this file
 Next, we'll paste our script into the top section of PowerShell ISE and click the "Run" button, which is marked with a green "Play" symbol.
 <br/> 
 
-![image](https://github.com/user-attachments/assets/dc4ad2d4-8894-4599-9abc-e241bc18389d)
+![Image](https://github.com/user-attachments/assets/42089426-bbd3-4d53-8e7b-fd3fb9701ada)
 
 <p/>
 
@@ -73,7 +73,7 @@ Next, we'll paste our script into the top section of PowerShell ISE and click th
 Once the script is run, it will start creating random users and placing them into the OU (Organizational Unit) we previously created called "_EMPLOYEES." By navigating to Active Directory Users and Computers and selecting the "EMPLOYEES" folder, you’ll see all the users stored there. Pick one of the randomly generated users, then log into Client-1 using their username and the password "Password1
 <br/>
 
-![Screenshot 2024-10-04 143218](https://github.com/user-attachments/assets/56308577-7806-45dd-a572-539dcacc2574)
+![Image](https://github.com/user-attachments/assets/7c9213da-3f6a-41eb-8279-524ff66a152d)
 
 <p/>
 
@@ -81,7 +81,7 @@ Once the script is run, it will start creating random users and placing them int
 Log out of Jane's account on Client-1: 
 <br/>
 
-![Screenshot 2024-10-04 143358](https://github.com/user-attachments/assets/bfd96e80-df73-40d5-97b1-10dc5a83c7ca)
+![Image](https://github.com/user-attachments/assets/ba5359ef-ae18-400c-93ee-80d65dcaa212)
 
 <p/>
 
@@ -89,7 +89,7 @@ Log out of Jane's account on Client-1:
 We can now log back into Client-1 using the newly created user from the script. Make sure to specify the login context by adding "mydomain.com\" before entering the username
 <br/>
 
-![Screenshot 2024-10-04 143712](https://github.com/user-attachments/assets/b300e9a8-e9b2-456c-92d8-8be2dbf16a56)
+![Image](https://github.com/user-attachments/assets/a8728870-7860-4128-a018-bf2d6c4361d1)
 
 <p/>
 
@@ -97,7 +97,7 @@ We can now log back into Client-1 using the newly created user from the script. 
 Once logged in, if we navigate to C: > Users, we'll see that our new user has a folder, as do the other users. However, we cannot access these folders because we lack the necessary permissions.
 <br/>
 
-![Screenshot 2024-10-04 144108](https://github.com/user-attachments/assets/71cf0dd3-16b6-4f9f-8dc7-df828365f352)
+![Image](https://github.com/user-attachments/assets/200b6008-59fc-4094-adf3-8f9c5ae8bc15)
 
 <br/>
 
@@ -105,7 +105,7 @@ Once logged in, if we navigate to C: > Users, we'll see that our new user has a 
 Let's log out of this user account. We will set up a group policy for account lockout and try to lock this user out.
 <br/> 
 
-![Screenshot 2024-10-04 144108](https://github.com/user-attachments/assets/5583c953-8c73-43ed-b7f4-49a92e4b2c25)
+![Image](https://github.com/user-attachments/assets/e88b7e3c-d4ae-4328-bc9c-da3288c0b505)
 
 <br/>
 
@@ -113,8 +113,8 @@ Let's log out of this user account. We will set up a group policy for account lo
 Return to the Domain Controller, right-click the "START" button, and select "Run." Type "gpmc.msc" to open the Group Policy Management console.
 <br/>
 
-![image](https://github.com/user-attachments/assets/432b4858-dbe4-4d70-818b-699eeab2427a)
-![Screenshot 2024-10-04 145946](https://github.com/user-attachments/assets/0ef8f684-c332-4437-b9fe-29b4f7cdf051)
+![Image](https://github.com/user-attachments/assets/70618ec6-0df9-40e4-af9e-0c8fe69d11f6)
+![Image](https://github.com/user-attachments/assets/512dde7e-21ad-4fe4-9284-ffc79d7cd095)
 
 <br/>
 
@@ -122,7 +122,7 @@ Return to the Domain Controller, right-click the "START" button, and select "Run
 Expand Domain> mydomain.com> Select "Default Domain Policy"
 <br/>
 
-![Screenshot 2024-10-04 150413](https://github.com/user-attachments/assets/bfc8b25f-9539-49e4-ae6c-449c8aac7cae)
+![Image](https://github.com/user-attachments/assets/37756cfc-0e4a-40d5-bce7-f7d169dccbe3)
 
 <br/>
 
@@ -130,7 +130,7 @@ Expand Domain> mydomain.com> Select "Default Domain Policy"
 Select and expand "Policies" under the "Computer Configuration" tab> Windows Settings> Security Settings and Select "Account Lockout Policy"
 <br/>
 
-![Screenshot 2024-10-04 150620](https://github.com/user-attachments/assets/ee5581eb-8608-4122-98b2-4448f3b4abc5)
+![Image](https://github.com/user-attachments/assets/707ada0f-e070-4882-b785-91f287195e64)
 
 <br/>
 
@@ -138,16 +138,15 @@ Select and expand "Policies" under the "Computer Configuration" tab> Windows Set
 Select "Account Threshold" and set the account to lock after 5 invalid login attempts. You can also choose the duration of the lockout after the failed attempts. Once done, click "Apply."
 <br/>
 
-![Screenshot 2024-10-04 151109](https://github.com/user-attachments/assets/7ca43c7f-64e4-452f-a305-22a668d380a1)
-![Screenshot 2024-10-04 151047](https://github.com/user-attachments/assets/fc87fc8f-f016-48bd-b1e2-4a573a2ca3bf)
-
+![Image](https://github.com/user-attachments/assets/98b9c6ef-2a97-48b0-b841-fd1a86450195)
+![Image](https://github.com/user-attachments/assets/ed2c97dc-898f-42b0-b149-14f73f3e7c39)
 <br/>
 
 <p align="center">
 To verify the changes, navigate to the Group Policy settings and review the lockout policy.
 <br/>
 
-![image](https://github.com/user-attachments/assets/cf33f8c5-67f8-42f8-975c-2345c3329181)
+![Image](https://github.com/user-attachments/assets/77c38bf6-7bd3-4fe0-9363-31e25700cac6)
 
 <br/>
 
@@ -155,16 +154,15 @@ To verify the changes, navigate to the Group Policy settings and review the lock
 The Group Policy will update automatically, but it may take a few minutes. To speed up the process, we can force the update on Client-1 by signing in as an admin and running "gpupdate /force" in the command line.
 <br/>
 
-![Screenshot 2024-10-04 151643](https://github.com/user-attachments/assets/a059a3b3-5086-4e59-9cfa-95202c5f7fea)
-![Screenshot 2024-10-04 152328](https://github.com/user-attachments/assets/58f43ed1-4be9-4dce-b9fa-7dce86d423ec)
-
+![Image](https://github.com/user-attachments/assets/54f5526e-ddc4-46e5-a4e2-ecf4a9c902a3)
+![Image](https://github.com/user-attachments/assets/36844d6d-3613-4656-b03d-7fe9d0f7a1fe)
 <br/>
 
 <p align="center">
-Now for the moment of truth. Let’s log into Client-1 with one of the users we created through PowerShell and enter the wrong password more than 5 times. After the correct number of failed attempts, a lockout message should appear.
+Now let’s log into Client-1 with one of the users we created through PowerShell and enter the wrong password more than 5 times. After the correct number of failed attempts, a lockout message should appear.
 <br/>
 
-![Screenshot 2024-10-04 152821](https://github.com/user-attachments/assets/167cba41-9070-4a13-ae78-5671ce82e2f3)
+![Image](https://github.com/user-attachments/assets/e0331921-27bc-4376-8577-9d79550f4e7e)
 
 <br/>
 
@@ -172,33 +170,23 @@ Now for the moment of truth. Let’s log into Client-1 with one of the users we 
 To unlock the user account, go to Active Directory Users and Computers > mydomain.com > _EMPLOYEES, double-click on the locked user, navigate to the "Account" tab, and check the "Unlock Account" box
 <br/>
 
-![image](https://github.com/user-attachments/assets/f38a2b96-6441-4a06-81c7-1e84b3842935)
+![Image](https://github.com/user-attachments/assets/9a1d0ec9-fa5b-4beb-9c3b-4338a36bceca)
 
 <br/>
 
 <p align="center">
-Now we're going to unlock the account and change the password at the same time. Right-Click the user> Rest Password> and select " Unlock user Account" option. 
+Now we're going to unlock the account and change the password at the same time. Right-Click the user> Rest Password> and select " Unlock user Account" option. The user can log into Client-1 as normal. 
 <br/>
 
-![Screenshot 2024-10-04 153903](https://github.com/user-attachments/assets/5457df21-bcab-4ef8-b09a-1fe361abcf2f)
-
-<br/>
-
-<p align="center">
-Now the user can log into Client-1 as normal
-<br/>
-
-![Screenshot 2024-10-04 145145](https://github.com/user-attachments/assets/ac1cb8a7-bd9d-4d3b-90ba-895d3befc8ed)
-
+![Image](https://github.com/user-attachments/assets/a4fbb59f-8292-4d37-a0e4-4a04606ca843)
 <br/>
 
 <p align="center">
 In order to disable users, navigate over to the DC and in "Active Directory Users and Computers"> mydomain.com> _EMPLOYEES> right-click the user you would like to disable and select "Disable"
 <br/>
 
-![image](https://github.com/user-attachments/assets/b33ac9be-3b6b-40e0-8e2f-7336215ff861)
-![Screenshot 2024-10-04 154404](https://github.com/user-attachments/assets/33b36c14-7aed-4cb4-beec-75e08ad19829)
-
+![Image](https://github.com/user-attachments/assets/005e86dd-319d-49a8-ba16-2a1b56ef2985)
+![Image](https://github.com/user-attachments/assets/4d70e7c8-7b07-4cd6-b9bb-90d0044605ac)
 
 <br/>
 
@@ -206,7 +194,7 @@ In order to disable users, navigate over to the DC and in "Active Directory User
 Now we're going to attempt to log in to the disabled account. There should be a error message once we enter the password. 
 <br/>
 
-![Screenshot 2024-10-04 154507](https://github.com/user-attachments/assets/35ac1513-7664-4365-94ae-7b8d1b7d6975)
+![Image](https://github.com/user-attachments/assets/76a35cd5-658f-4d52-bd25-ee5422aa903f)
 
 <br/>
 
@@ -214,8 +202,8 @@ Now we're going to attempt to log in to the disabled account. There should be a 
 Navigate back to the DC and right-click the user thats disabled and select "Enable" 
 <br/>
 
-![image](https://github.com/user-attachments/assets/7fe48357-b6c1-479a-a360-0e0878a07541)
-![Screenshot 2024-10-04 154711](https://github.com/user-attachments/assets/f14477e5-bce1-4917-a30f-b0761a5ab932)
+![Image](https://github.com/user-attachments/assets/2962b01b-01e7-40d3-8151-2235bfa9072b)
+![Image](https://github.com/user-attachments/assets/f89c505c-dfae-435b-809e-66676220b5db)
 
 <br/>
 
@@ -223,7 +211,7 @@ Navigate back to the DC and right-click the user thats disabled and select "Enab
 The disabled user is now re-enabled and has regained access to the account. Next, let’s attempt to view the user’s logs. To do this, search for "Event Viewer," then navigate to Windows Logs > Security. As you can see, we are unable to view the logs.
 <br/>
 
-![Screenshot 2024-10-04 155151](https://github.com/user-attachments/assets/2156dd78-8fc6-4e2f-b1d7-eb40831ea95f)
+![Image](https://github.com/user-attachments/assets/ed8d0685-62d5-4539-8a98-e2c13b78e760)
 
 <br/>
 
@@ -231,7 +219,7 @@ The disabled user is now re-enabled and has regained access to the account. Next
 We received the error in Event Viewer because we’re not logged in as an admin. Since we already know Jane's credentials, we can close the window and reopen it, this time as Administrator, and then enter the credentials.
 <br/>
 
-![Screenshot 2024-10-04 155418](https://github.com/user-attachments/assets/1731e2d1-17a9-4d0f-bfb7-2e0a2652e7bc)
+![Image](https://github.com/user-attachments/assets/bc05c1c1-0dc9-4d63-9e9e-23ecd95372a8)
 
 <br/>
 
@@ -239,7 +227,7 @@ We received the error in Event Viewer because we’re not logged in as an admin.
 Now if we navigate back over to the Secuirty Log page we can view the logs: 
 <br/>
 
-![Screenshot 2024-10-04 155600](https://github.com/user-attachments/assets/7841dc9e-bda0-4758-91f8-5c78f6929dae)
+![Image](https://github.com/user-attachments/assets/3411a6ed-4ace-4a9d-9878-76e38a14d211)
 
 <br/>
 
@@ -247,8 +235,7 @@ Now if we navigate back over to the Secuirty Log page we can view the logs:
 In these logs, we can observe several key components that make up a log, such as the IP address, failed login attempts, the user who tried to log in, and the date and time of each attempt.
 <br/>
 
-![image](https://github.com/user-attachments/assets/c20d3ff0-afae-4fd1-9804-c021754c3f8c)
-
+![Image](https://github.com/user-attachments/assets/c75a58c4-1bef-4d89-abda-f95bb1bc4d7d)
 
 
 
